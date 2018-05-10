@@ -12,13 +12,25 @@
   <body>
     <div class="jumbotron">
 <!--     <header class="navbar navbar-fixed-bottom navbar-inverse">
- -->      <div class="container">
-        <%= link_to "My Dear Diary", 'root_path' %>
-        <nav> 
-          <ul class="navbar navbar-right navbar-fixed navbar-inverse">
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Post", index_path %></li>
-            <li><%= link_to "About", "https://www.amandakenise.com/" %></li>
+ -->     
+   <nav> 
+    <ul class="navbar justify-content-end">
+      <li class="pull-right">
+      <% if user_signed_in? %>
+      Welcome <% current_user.email %>
+      <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %> 
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>  
+      <% end %>
+
+    </div>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Post", index_path %></li>
+      <li><%= link_to "About", "https://www.amandakenise.com/" %></li>
+      <li><div class="container">               
+                
+    
+  </div>
+...</li>
           </ul>
         </nav>
       </div>
@@ -30,3 +42,6 @@
     </div>
   </body>
 </html>
+
+
+

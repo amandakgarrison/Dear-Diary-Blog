@@ -11,7 +11,7 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @post.author %>
+ by <%= @post.user.email %>
 </p>
 
 <p>
@@ -28,8 +28,9 @@
 <div id= "comments">
 	<%= render "comments/form", comment: @comment %>
 	<% @post.comments.each do |comment| %>
+	<h2><%= image_tag comment.user.avatar.url, class: "thumb" %> </h2>
 	<p>
-		<%= comment.author %> said... <br>
+		<%= comment.user.username %> said... <br>
 		<%= comment.comment_entry %>
 	</p>
 	<%end %>
