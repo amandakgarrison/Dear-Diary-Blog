@@ -10,14 +10,15 @@
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
+    <div class="jumbotron">
+<!--     <header class="navbar navbar-fixed-bottom navbar-inverse">
+ -->      <div class="container">
         <%= link_to "My Dear Diary", 'root_path' %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",   'root_path' %></li>
-            <li><%= link_to "Post",   'index_path' %></li>
-            <li><%= link_to "About", 'https//www.amandakenise.com/' %></li>
+        <nav> 
+          <ul class="navbar navbar-right navbar-fixed navbar-inverse">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Post", index_path %></li>
+            <li><%= link_to "About", "https://www.amandakenise.com/" %></li>
           </ul>
         </nav>
       </div>
@@ -26,6 +27,6 @@
     <%= yield %>
 
     </div>
-
+    </div>
   </body>
 </html>
