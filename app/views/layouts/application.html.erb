@@ -10,8 +10,22 @@
   </head>
 
   <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "My Dear Diary", 'root_path' %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   'root_path' %></li>
+            <li><%= link_to "Post",   'index_path' %></li>
+            <li><%= link_to "About", 'https//www.amandakenise.com/' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="container">
     <%= yield %>
+
     </div>
+
   </body>
 </html>

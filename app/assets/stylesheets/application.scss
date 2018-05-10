@@ -16,3 +16,54 @@
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+
+/*/* typography */
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    letter-spacing: 5px;
+    background: #474F1E;
+    font-color:#F8E2D3;
+}
+
+body{
+	background: #C0BBB1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 2;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+	line-height: 4;
+	padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.7em;
+  font-family: Verdana;
+
+}
+
+
