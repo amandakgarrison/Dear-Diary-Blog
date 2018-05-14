@@ -4,7 +4,11 @@
 <br>
 <br>
 <br>
+
 <p>
+	<div class="panel-group">
+  <div class="panel panel-default">
+	<div class="well well-lg">
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
@@ -18,8 +22,9 @@
   <strong>Blog entry:</strong>
   <%= @post.blog_entry %>
 </p>
-
+<% if current_user.id == @post.user_id %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end -%>
 <%= link_to 'Back', posts_path %>
 
 <br>
@@ -30,8 +35,12 @@
 	<% @post.comments.each do |comment| %>
 	<h2><%= image_tag comment.user.avatar.url, class: "thumb" %> </h2>
 	<p>
-		<%= comment.user.username %> said... <br>
+		<%= @post.blog_entry.html_safe %>
+		
+  <strong><%= link_to comment.user.username, user_posts_path(name: comment.user.username) %> said...</strong>
+ <br>
 		<%= comment.comment_entry %>
 	</p>
 	<%end %>
 </div>
+

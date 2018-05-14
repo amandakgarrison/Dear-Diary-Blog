@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'gravatarify', '~> 3.0.0'
 gem 'carrierwave', '~> 1.0'
+gem 'kaminari'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
